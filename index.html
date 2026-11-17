@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff3f8">
+    <title>ห้องต่อภาพแสนหวาน</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <main class="game">
+      <header class="game-header">
+        <div>
+          <h1>ห้องต่อภาพแสนหวาน</h1>
+          <p class="intro">ค่อย ๆ ต่อทีละชิ้น แล้วภาพน่ารักจะสมบูรณ์นะ</p>
+        </div>
+        <div class="controls">
+          <button class="button button-secondary" id="sound-button" type="button" aria-pressed="false">
+            เปิดเสียง
+          </button>
+          <button class="button button-secondary" id="hint-button" type="button" aria-pressed="false">
+            แสดงภาพใบ้
+          </button>
+          <button class="button button-primary" id="restart-button" type="button">
+            เริ่มใหม่
+          </button>
+        </div>
+      </header>
+
+      <section class="game-panel" aria-label="กระดานเกมจิ๊กซอว์">
+        <div class="status-row">
+          <p id="status" role="status" aria-live="polite">กำลังเตรียมชิ้นส่วน...</p>
+          <span class="piece-count" id="piece-count">0 / 20 ชิ้น</span>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="puzzle" aria-label="ลากชิ้นส่วนจิ๊กซอว์ไปวางในตำแหน่งที่ถูกต้อง">
+            เบราว์เซอร์นี้ไม่รองรับ Canvas
+          </canvas>
+        </div>
+      </section>
+      <p class="instructions">ลากชิ้นส่วนไปวางบนกระดาน <span aria-hidden="true">♡</span> ถ้าใกล้ตำแหน่งที่ถูกต้อง ชิ้นส่วนจะเข้าที่เอง</p>
+    </main>
+  </body>
+</html>
